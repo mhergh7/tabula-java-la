@@ -1,3 +1,12 @@
+tabula-java-la
+THIS FORK IS ABOUT TO IMPROVE/CORRECT SOME OF THE LATTICE-MODE ISSUES
+
+Unless otherwise specified, the functional scope is restricted to rectangular tables with horizontal, latin-based alphabet text (text flow top to bottom, from left to right).
+
+Issues to be adressed:
+1. When vertical gitter thickness is above a threshold, then some ghost cells will be inserted (practically considered inside the gitter).
+   --> the solution to that is to pass an optional param of a minWidth such that a cell will be added iff the text-content is non-empty OR the width is >= minWidth
+
 tabula-java [![Build Status](https://travis-ci.org/tabulapdf/tabula-java.svg?branch=master)](https://travis-ci.org/tabulapdf/tabula-java)
 ===========
 
