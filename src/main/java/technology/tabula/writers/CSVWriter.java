@@ -36,7 +36,9 @@ public class CSVWriter implements Writer {
                 for (List<RectangularTextContainer> row : table.getRows()) {
                     List<String> cells = new ArrayList<>(row.size());
                     for (RectangularTextContainer<?> cell : row)
-                    	cells.add(cell.getText());
+                        if (!(cell.getTextElements().isEmpty()) || cell.getWidth() > 5.0) {
+                            cells.add(cell.getText());
+                        }
                     printer.printRecord(cells);
                 }
             }
